@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050705;
+  --foreground: #f7f4ec;
+  --green: #9be15d;
+  --gold: #d8b875;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 50% -20%, rgba(86, 156, 55, 0.08), transparent 42%),
+    var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(155, 225, 93, 0.32);
+  color: white;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.hero-glow {
+  background:
+    radial-gradient(circle at 78% 28%, rgba(111, 192, 66, 0.16), transparent 28%),
+    radial-gradient(circle at 70% 20%, rgba(216, 184, 117, 0.07), transparent 22%);
+}
+
+.dashboard-shell::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(120deg, rgba(216,184,117,.35), transparent 28%, rgba(155,225,93,.28) 72%, transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(155, 225, 93, 0.9);
+  font-size: 0.72rem;
+  line-height: 1;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 1.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), var(--green));
+}
+
+.section-title {
+  max-width: 920px;
+  font-size: clamp(2.55rem, 5vw, 4.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 600;
+}
+
+.section-title span {
+  color: rgba(255,255,255,.38);
+}
+
+@media (max-width: 640px) {
+  .grid-bg {
+    background-size: 30px 30px;
+  }
+
+  .eyebrow {
+    font-size: 0.64rem;
+  }
+}
