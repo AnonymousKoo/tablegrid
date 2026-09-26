@@ -1,4 +1,5 @@
 import Image from "next/image";
+import DemoOperatingView from "@/components/DemoOperatingView";
 
 const outcomes = [
   {
@@ -154,70 +155,18 @@ export default function Home() {
           </div>
 
           <div className="relative z-10">
-            <div className="absolute -left-10 -top-24 hidden w-44 opacity-88 lg:block">
-              <Image src="/tablegrid-logo.webp" alt="TableGrid logo" width={700} height={700} priority className="h-auto w-full" />
+            <div className="mb-5 flex justify-center lg:justify-start lg:pl-3">
+              <Image
+                src="/tablegrid-logo.webp"
+                alt="TableGrid logo"
+                width={700}
+                height={700}
+                priority
+                className="h-auto w-36 sm:w-40 lg:w-44"
+              />
             </div>
 
-            <div className="dashboard-shell relative rounded-[30px] border border-white/10 bg-[#0A0D0A]/95 p-3 shadow-2xl shadow-black/60">
-              <div className="rounded-[24px] border border-white/8 bg-[#090B09] p-5 sm:p-6">
-                <div className="flex items-center justify-between border-b border-white/7 pb-5">
-                  <div>
-                    <div className="text-[11px] uppercase tracking-[.2em] text-[#9BE15D]">Demo operating view</div>
-                    <div className="mt-1 text-lg font-semibold">Today at a glance</div>
-                  </div>
-                  <div className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/50">Today</div>
-                </div>
-
-                <div className="grid gap-3 py-5 sm:grid-cols-4">
-                  {[
-                    ["Orders", "327", "+8%"],
-                    ["Revenue", "$18,420", "+12%"],
-                    ["Food cost", "26.8%", "-3.1%"],
-                    ["Margin", "43.2%", "+5.4%"],
-                  ].map(([label, value, delta]) => (
-                    <div key={label} className="rounded-2xl border border-white/7 bg-white/[.028] p-4">
-                      <div className="text-xs text-white/42">{label}</div>
-                      <div className="mt-2 text-2xl font-semibold tracking-tight">{value}</div>
-                      <div className="mt-2 text-xs text-[#9BE15D]">{delta}</div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="grid gap-3 lg:grid-cols-[1.1fr_.9fr]">
-                  <div className="rounded-2xl border border-white/7 bg-white/[.025] p-5">
-                    <div className="flex items-center justify-between">
-                      <div className="font-medium">Tomorrow&apos;s operation</div>
-                      <span className="text-xs text-[#9BE15D]">On track</span>
-                    </div>
-                    <div className="mt-5 space-y-4">
-                      {[
-                        ["Forecast demand", "427 portions", "green"],
-                        ["Production remaining", "398 portions", "gold"],
-                        ["Inventory risk", "3 ingredients", "red"],
-                      ].map(([label, value, tone]) => (
-                        <div key={label} className="flex items-center justify-between border-b border-white/6 pb-3 text-sm last:border-0 last:pb-0">
-                          <div className="flex items-center gap-2 text-white/55"><StatusDot tone={tone as "green" | "gold" | "red"} /> {label}</div>
-                          <div className="font-medium">{value}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="rounded-2xl border border-[#9BE15D]/22 bg-[#9BE15D]/[.055] p-5">
-                    <div className="text-[11px] uppercase tracking-[.18em] text-[#9BE15D]">Action required</div>
-                    <div className="mt-3 text-xl font-semibold">Purchase 18 lb salmon</div>
-                    <p className="mt-2 text-sm leading-6 text-white/55">
-                      Current demand projects a stockout tomorrow at approximately 1:40 PM.
-                    </p>
-                    <button className="mt-5 w-full rounded-xl bg-[#9BE15D] px-4 py-3 text-sm font-semibold text-[#071004]">
-                      Resolve shortage
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-4 text-center text-xs text-white/30">Illustrative product view · live data connections come from the TableGrid platform</div>
+            <DemoOperatingView />
           </div>
         </div>
       </section>
