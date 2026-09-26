@@ -2,21 +2,73 @@
 
 TableGrid is the thin operating layer for food businesses.
 
-This repository currently contains the public marketing website. It is intentionally separate from the deeper food-platform domain logic and is designed to explain the outcome TableGrid creates: a connected operating picture from demand through profit.
+This repository contains the public TableGrid experience plus the proprietary **food-business domain logic** and **application logic** that Avuhz will orchestrate once Avuhz is ready.
 
-## Current scope
+## What we are building now
 
-- Outcome-led public homepage
-- TableGrid brand system and logo
-- Illustrative operating dashboard
-- Operating-network explainer
-- Food-business outcome and use-case sections
-- Responsive layout
-- Static, deployable Next.js application
+- Public outcome-led TableGrid website
+- Food-business domain model
+- Deterministic domain rules
+- Application use cases
+- Ports/interfaces for future adapters
+- Operating blueprint logic
+- Demand → recipe → ingredient requirement logic
+- Inventory projection
+- Purchasing recommendations
+- Item economics
 
-## Architecture boundary
+## What we are not building here
 
-The website does **not** own food-business domain logic, workflow execution, inventory truth, forecasting, or automation. Those capabilities belong behind the thin TableGrid experience and can be connected through APIs as the platform matures.
+TableGrid is **not** becoming another orchestration platform.
+
+For now we are intentionally deferring:
+
+- workflow engine
+- autonomous agents
+- scheduling/orchestration
+- generic automation infrastructure
+- production integrations
+- database-specific repositories
+- notification infrastructure
+
+Those capabilities can be connected later, with Avuhz owning orchestration.
+
+## Architecture
+
+```text
+TableGrid website / future app
+            |
+            v
+     application/
+     use cases
+            |
+            v
+        domain/
+ food-business rules
+            |
+            v
+         ports
+            |
+     future adapters
+            |
+           Avuhz
+```
+
+The domain layer must remain usable without Avuhz. Avuhz will eventually invoke TableGrid application use cases; it should not contain TableGrid's food-business rules.
+
+See [docs/architecture.md](docs/architecture.md) for the boundary in more detail.
+
+## Current first vertical slice
+
+```text
+Orders
+  → Products
+  → Recipes
+  → Ingredient requirements
+  → Inventory projection
+  → Shortage calculation
+  → Purchase recommendation
+```
 
 ## Run locally
 
@@ -24,8 +76,6 @@ The website does **not** own food-business domain logic, workflow execution, inv
 npm install
 npm run dev
 ```
-
-Then open the local Next.js URL shown in the terminal.
 
 ## Validate
 
