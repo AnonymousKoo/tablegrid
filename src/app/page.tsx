@@ -1,5 +1,5 @@
-import Image from "next/image";
 import DemoOperatingView from "@/components/DemoOperatingView";
+import TableGridBrand from "@/components/TableGridBrand";
 
 const outcomes = [
   {
@@ -91,22 +91,8 @@ export default function Home() {
     <main className="min-h-screen overflow-hidden bg-[#F7F1E8] text-[#3B241A]">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[#3B241A]/8 bg-[#F7F1E8]/88 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-6 lg:px-10">
-          <a href="#" className="group flex items-center gap-3" aria-label="TableGrid home">
-            <div className="relative size-11 overflow-hidden rounded-xl border border-[#3B241A]/10 bg-black">
-              <Image
-                src="/tablegrid-logo.webp"
-                alt=""
-                fill
-                priority
-                className="scale-[1.65] object-contain object-[50%_28%] transition-transform duration-500 group-hover:scale-[1.72]"
-              />
-            </div>
-            <div className="leading-none">
-              <div className="text-[17px] font-semibold tracking-[.18em]">
-                TABLE<span className="text-[#6F944E]">GRID</span>
-              </div>
-              <div className="mt-1 text-[8px] uppercase tracking-[.28em] text-[#3B241A]/45">Operating network</div>
-            </div>
+          <a href="#" className="group" aria-label="TableGrid home">
+            <TableGridBrand size="nav" />
           </a>
 
           <nav className="hidden items-center gap-8 text-sm text-[#3B241A]/64 lg:flex">
@@ -156,15 +142,8 @@ export default function Home() {
           </div>
 
           <div className="relative z-10">
-            <div className="mb-5 flex justify-center lg:justify-start lg:pl-3">
-              <Image
-                src="/tablegrid-logo.webp"
-                alt="TableGrid logo"
-                width={700}
-                height={700}
-                priority
-                className="h-auto w-36 sm:w-40 lg:w-44"
-              />
+            <div className="mb-7 flex justify-center lg:justify-start">
+              <TableGridBrand size="hero" />
             </div>
 
             <DemoOperatingView />
@@ -410,11 +389,8 @@ export default function Home() {
               {["Ordering", "Payments", "Suppliers", "Accounting", "Delivery", "Payroll"].map((item) => (
                 <div key={item} className="flex min-h-28 items-center justify-center rounded-2xl border border-[#3B241A]/8 bg-[#FBF6EF] text-sm font-medium text-[#3B241A]/60">{item}</div>
               ))}
-              <div className="col-span-2 flex min-h-32 items-center justify-center rounded-2xl border border-[#6F944E]/25 bg-[#6F944E]/[.05] text-center sm:col-span-3">
-                <div>
-                  <div className="text-xl font-semibold">TABLE<span className="text-[#6F944E]">GRID</span></div>
-                  <div className="mt-1 text-xs uppercase tracking-[.18em] text-[#3B241A]/35">Operating network</div>
-                </div>
+              <div className="col-span-2 flex min-h-32 items-center justify-center rounded-2xl border border-[#C98524]/22 bg-[#D89B2B]/[.06] text-center sm:col-span-3">
+                <TableGridBrand size="nav" />
               </div>
             </div>
           </div>
@@ -424,7 +400,9 @@ export default function Home() {
       <section id="contact" className="relative py-28 sm:py-36">
         <div className="hero-glow pointer-events-none absolute inset-0 rotate-180 opacity-60" />
         <div className="relative mx-auto max-w-[1000px] px-6 text-center lg:px-10">
-          <Image src="/tablegrid-logo.webp" alt="TableGrid logo" width={700} height={700} className="mx-auto mb-8 h-auto w-48 sm:w-56" />
+          <div className="mb-8 flex justify-center">
+            <TableGridBrand size="footer" />
+          </div>
           <div className="eyebrow justify-center">The operating network for food businesses</div>
           <h2 className="mx-auto mt-6 max-w-4xl text-4xl font-semibold leading-[1.02] tracking-[-.05em] sm:text-6xl">
             See how your operation fits into the network.

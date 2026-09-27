@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import BlueprintBuilder from "@/components/BlueprintBuilder";
+import TableGridBrand from "@/components/TableGridBrand";
 
 export const metadata = {
   title: "Build a Sample Operating Blueprint | TableGrid",
@@ -13,24 +13,8 @@ export default function BlueprintPage() {
     <main className="min-h-screen bg-[#F7F1E8] text-[#3B241A]">
       <header className="sticky top-0 z-50 border-b border-[#3B241A]/8 bg-[#F7F1E8]/92 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-[1320px] items-center justify-between px-6 lg:px-10">
-          <Link href="/" className="flex items-center gap-3" aria-label="TableGrid home">
-            <div className="relative size-11 overflow-hidden rounded-xl border border-[#3B241A]/10 bg-black">
-              <Image
-                src="/tablegrid-logo.webp"
-                alt=""
-                fill
-                priority
-                className="scale-[1.65] object-contain object-[50%_28%]"
-              />
-            </div>
-            <div className="leading-none">
-              <div className="text-[17px] font-semibold tracking-[.18em]">
-                TABLE<span className="text-[#6F944E]">GRID</span>
-              </div>
-              <div className="mt-1 text-[8px] uppercase tracking-[.28em] text-[#3B241A]/45">
-                Operating network
-              </div>
-            </div>
+          <Link href="/" aria-label="TableGrid home">
+            <TableGridBrand size="nav" />
           </Link>
 
           <Link
