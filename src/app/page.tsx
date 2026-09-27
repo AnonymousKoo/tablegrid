@@ -114,6 +114,7 @@ export default function Home() {
             <a href="#network" className="transition hover:text-white">How it works</a>
             <a href="#intelligence" className="transition hover:text-white">Intelligence</a>
             <a href="#use-cases" className="transition hover:text-white">Who it is for</a>
+            <a href="/blueprint" className="transition hover:text-white">Blueprint</a>
           </nav>
 
           <a href="#contact" className="rounded-full border border-[#9BE15D]/45 bg-[#9BE15D]/10 px-5 py-2.5 text-sm font-medium text-[#DFFFC4] transition hover:bg-[#9BE15D]/16">
@@ -139,8 +140,8 @@ export default function Home() {
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <a href="#contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-[#9BE15D] px-6 py-3.5 font-semibold text-[#071004] transition hover:bg-[#B3EF83]">
-                See TableGrid in action <Arrow />
+              <a href="/blueprint" className="inline-flex items-center justify-center gap-3 rounded-full bg-[#9BE15D] px-6 py-3.5 font-semibold text-[#071004] transition hover:bg-[#B3EF83]">
+                Build a sample blueprint <Arrow />
               </a>
               <a href="#network" className="inline-flex items-center justify-center rounded-full border border-white/12 bg-white/[.03] px-6 py-3.5 font-medium text-white/78 transition hover:bg-white/[.06]">
                 Explore the operating network
@@ -426,13 +427,13 @@ export default function Home() {
           <Image src="/tablegrid-logo.webp" alt="TableGrid logo" width={700} height={700} className="mx-auto mb-8 h-auto w-48 sm:w-56" />
           <div className="eyebrow justify-center">The operating network for food businesses</div>
           <h2 className="mx-auto mt-6 max-w-4xl text-4xl font-semibold leading-[1.02] tracking-[-.05em] sm:text-6xl">
-            Stop running the business from disconnected pieces.
+            See how your operation fits into the network.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/52">
-            Connect demand, inventory, production, fulfillment, and profit with TableGrid.
+            Build a sample operating blueprint and see how TableGrid connects demand, inventory, production, fulfillment, and economics.
           </p>
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-            <a href="#" className="rounded-full bg-[#9BE15D] px-7 py-3.5 font-semibold text-[#071004] transition hover:bg-[#B3EF83]">See TableGrid in action</a>
+            <a href="/blueprint" className="rounded-full bg-[#9BE15D] px-7 py-3.5 font-semibold text-[#071004] transition hover:bg-[#B3EF83]">Build a sample blueprint</a>
             <a href="#network" className="rounded-full border border-white/12 bg-white/[.03] px-7 py-3.5 font-medium text-white/75 transition hover:bg-white/[.06]">See how it works</a>
           </div>
         </div>
@@ -441,7 +442,7 @@ export default function Home() {
       <footer className="border-t border-white/8 py-8">
         <div className="mx-auto flex max-w-[1220px] flex-col gap-4 px-6 text-xs text-white/34 sm:flex-row sm:items-center sm:justify-between lg:px-10">
           <div>© 2026 TableGrid. The operating network for food businesses.</div>
-          <div>Built as a thin operating layer for the food platform.</div>
+          <div>Private development preview · Thin customer-facing layer.</div>
         </div>
       </footer>
     </main>

@@ -7,6 +7,8 @@ This repository contains the public TableGrid experience plus the proprietary **
 ## What we are building now
 
 - Public outcome-led TableGrid website
+- Interactive operating-view demo
+- Sample Operating Blueprint intake using real application logic
 - Food-business domain model
 - Deterministic domain rules
 - Application use cases
