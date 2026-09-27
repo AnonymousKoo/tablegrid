@@ -13,9 +13,13 @@ This repository contains the public TableGrid experience plus the proprietary **
 - Ports/interfaces for future adapters
 - Operating blueprint logic
 - Demand → recipe → ingredient requirement logic
-- Inventory projection
+- Inventory movement ledger + projection
 - Purchasing recommendations
-- Item economics
+- Production batch planning
+- Item economics and contribution margin
+- Operational risk detection
+- End-to-end operating-plan use case
+- Automated domain/application tests
 
 ## What we are not building here
 
@@ -68,6 +72,9 @@ Orders
   → Inventory projection
   → Shortage calculation
   → Purchase recommendation
+  → Production plan
+  → Product economics
+  → Operational risks
 ```
 
 ## Run locally
@@ -80,6 +87,7 @@ npm run dev
 ## Validate
 
 ```bash
+npm test
 npm run lint
 npm run build
 ```

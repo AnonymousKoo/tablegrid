@@ -41,13 +41,14 @@ The domain layer owns food-specific rules such as:
 
 - orders to recipe demand
 - recipe demand to ingredient requirements
-- inventory projection
+- inventory movement ledger and inventory projection
 - shortage calculation
 - supplier pack-size rounding
 - purchasing recommendations
 - recipe completeness
-- production requirements
+- production requirements and batch planning
 - item economics and contribution margin
+- operational risk detection
 - future forecasting rules
 - future waste and variance rules
 
@@ -93,6 +94,9 @@ Orders
   -> Inventory projection
   -> Shortage calculation
   -> Purchase recommendation
+  -> Production plan
+  -> Product economics
+  -> Operational risks
 ```
 
 The operating-blueprint use case is also included as the first onboarding domain/application primitive.
